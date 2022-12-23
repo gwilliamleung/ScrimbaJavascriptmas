@@ -1,11 +1,14 @@
-import products from "./day 22 data";
+/* From Day 3 forward I will not be sharing the prompt as it is only for paid members of Scrimba
+please sign up for Scrimba to see the prompts
 
-function sortProducts(data){
-    return data.sort((a,b)=> a.price - b.price)
+https://scrimba.com/learn/javascriptmas
+
+*/
+
+function displayTables(){
+    const readyTables= getReadyTables();
+    const tableHTML = readyTables.map(table => `<div class="table">${table} </div>`).join('');
+
+    const tablesSection = document.querySelector('.tables');
+    tablesSection.innerHTML = tableHTML;
 }
-
-const listByCheapest = sortProducts(products);
-for (const product of listByCheapest){
-    console.log(`${product.product},${product.price}}`);
-}
-
